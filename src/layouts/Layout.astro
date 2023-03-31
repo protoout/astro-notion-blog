@@ -74,18 +74,7 @@ const asidePaddingTop = coverImageURL ? '200px' : '60px'
   </head>
   <body>
     <GoogleAnalytics trackingId={PUBLIC_GA_TRACKING_ID} />
-    <div class="container">
-      <main>
-        {
-          coverImageURL && (
-            <div class="cover">
-              <img src={coverImageURL} />
-            </div>
-          )
-        }
-
-        <div class="content">
-          <header>
+              <header>
             <h1>
               <a href={getNavLink('/')}>
                 {
@@ -115,6 +104,18 @@ const asidePaddingTop = coverImageURL ? '200px' : '60px'
             </div>
           </header>
 
+    <div class="container">
+      <main>
+        {
+          coverImageURL && (
+            <div class="cover">
+              <img src={coverImageURL} />
+            </div>
+          )
+        }
+
+        <div class="content">
+ 
           <slot name="main" />
 
           <footer>
