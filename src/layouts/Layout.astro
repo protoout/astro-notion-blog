@@ -81,7 +81,7 @@ const asidePaddingTop = coverImageURL ? '200px' : '60px'
                   database.Icon && database.Icon.Type === 'emoji' ? (
                     <>
                       <span>{database.Icon.Emoji}</span>
-                      {database.Title}
+                      <span class='title'>{database.Title}</span>
                     </>
                   ) : database.Icon && database.Icon.Type === 'external' ? (
                     <>
@@ -143,6 +143,9 @@ const asidePaddingTop = coverImageURL ? '200px' : '60px'
 </html>
 
 <style define:vars={{ asidePaddingTop }}>
+  .title{
+    color:red;
+  }
   .container {
     display: flex;
     min-height: 100vh;
