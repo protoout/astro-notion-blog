@@ -130,11 +130,11 @@ export const getNavLink = (nav: string) => {
 }
 
 export const getPostLink = (slug: string) => {
-  return pathJoin(BASE_PATH, `/posts/${slug}`)
+  return pathJoin(BASE_PATH, `/posts2/${slug}`)
 }
 
 export const getTagLink = (tag: string) => {
-  return pathJoin(BASE_PATH, `/posts/tag/${encodeURIComponent(tag)}`)
+  return pathJoin(BASE_PATH, `/posts2/tag/${encodeURIComponent(tag)}`)
 }
 
 export const getPageLink = (page: number, tag: string) => {
@@ -144,9 +144,9 @@ export const getPageLink = (page: number, tag: string) => {
   return tag
     ? pathJoin(
         BASE_PATH,
-        `/posts/tag/${encodeURIComponent(tag)}/page/${page.toString()}`
+        `/posts2/tag/${encodeURIComponent(tag)}/page/${page.toString()}`
       )
-    : pathJoin(BASE_PATH, `/posts/page/${page.toString()}`)
+    : pathJoin(BASE_PATH, `/posts2/page/${page.toString()}`)
 }
 
 export const getDateStr = (date: string) => {

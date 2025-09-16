@@ -52,7 +52,7 @@ const currentTag = posts[0].Tags.find((t) => t.name === tag)
 
 <Layout
   title={`Posts in ${tag} ${page}/${numberOfPages}`}
-  path={`/posts/tag/${tag}/page/${page}`}
+  path={getPageLink(parseInt(page, 10), tag)}
 >
   <div slot="main" class={styles.main}>
     <header>
