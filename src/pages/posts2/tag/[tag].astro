@@ -20,6 +20,7 @@ import BlogPostsLink from '../../../components/BlogPostsLink.astro'
 import BlogTagsLink from '../../../components/BlogTagsLink.astro'
 import styles from '../../../styles/blog.module.css'
 import '../../../styles/notion-color.css'
+import { getTagLink } from '../../../lib/blog-helpers.ts'
 
 export async function getStaticPaths() {
   const allTags = await getAllTags()
